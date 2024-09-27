@@ -115,6 +115,7 @@ namespace CarrinhoDeCompras
                 }
             }
             lbltotal.Text = "Total:" + total.ToString("R$ " + "0.00");
+            // primeito commit and push
         }
     }
 }
