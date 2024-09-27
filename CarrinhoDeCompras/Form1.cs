@@ -43,7 +43,7 @@ namespace CarrinhoDeCompras
             return string.Format("{0,-10} {1,20:C2}", p.nome, p.preco);
         }
         private void btnAdd_Click(object sender, EventArgs e)
-        {
+        {            
             if (lstProdutos.SelectedItems.Count > 0)
             {
                 if (MessageBox.Show(
