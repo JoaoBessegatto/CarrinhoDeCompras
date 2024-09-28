@@ -43,7 +43,7 @@ namespace CarrinhoDeCompras
             return string.Format("{0,-10} {1,20:C2}", p.nome, p.preco);
         }
         private void btnAdd_Click(object sender, EventArgs e)
-        {            
+        {
             if (lstProdutos.SelectedItems.Count > 0)
             {
                 if (MessageBox.Show(
@@ -105,17 +105,16 @@ namespace CarrinhoDeCompras
                 // Acessa a lista original de produtos associada ao lstProdutos.Tag
                 var produtos = (List<Produtos>)lstProdutos.Tag;
 
-                
+
                 foreach (var produto in produtos)
-                {              
+                {
                     if (Organizador(produto) == item.ToString())
                     {
                         total += produto.preco;
                     }
                 }
             }
-            lbltotal.Text = "Total:" + total.ToString("R$ " + "0.00");
-            // primeito commit and push
-        }
+            lbltotal.Text = "Total:" + total.ToString("R$ " + "0.00");      
+        }      
     }
 }
