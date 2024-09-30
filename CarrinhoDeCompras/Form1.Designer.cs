@@ -108,16 +108,16 @@
             // 
             lbltotal.BackColor = SystemColors.Window;
             lbltotal.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lbltotal.Location = new Point(407, 341);
+            lbltotal.Location = new Point(396, 341);
             lbltotal.Name = "lbltotal";
-            lbltotal.Size = new Size(288, 35);
+            lbltotal.Size = new Size(307, 35);
             lbltotal.TabIndex = 7;
             lbltotal.Text = "Total:";
             lbltotal.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // btnAdd
             // 
-            btnAdd.Location = new Point(81, 382);
+            btnAdd.Location = new Point(68, 382);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(125, 54);
             btnAdd.TabIndex = 8;
@@ -127,7 +127,7 @@
             // 
             // btnRemove
             // 
-            btnRemove.Location = new Point(407, 382);
+            btnRemove.Location = new Point(396, 382);
             btnRemove.Name = "btnRemove";
             btnRemove.Size = new Size(120, 54);
             btnRemove.TabIndex = 9;
@@ -137,12 +137,13 @@
             // 
             // btnFim
             // 
-            btnFim.Location = new Point(584, 382);
+            btnFim.Location = new Point(591, 382);
             btnFim.Name = "btnFim";
             btnFim.Size = new Size(112, 54);
             btnFim.TabIndex = 10;
             btnFim.Text = "Finalizar Compra";
             btnFim.UseVisualStyleBackColor = true;
+            btnFim.Click += btnFim_Click;
             // 
             // label3
             // 

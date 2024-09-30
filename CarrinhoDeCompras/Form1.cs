@@ -97,7 +97,7 @@ namespace CarrinhoDeCompras
                     MessageBoxIcon.Warning);
             }
         }
-        private void SomarCompras()
+        public void SomarCompras()
         {
             double total = 0;
             foreach (var item in lstCompras.Items)
@@ -114,7 +114,26 @@ namespace CarrinhoDeCompras
                     }
                 }
             }
-            lbltotal.Text = "Total:" + total.ToString("R$ " + "0.00");      
-        }      
+            lbltotal.Text = "Total:" + total.ToString("R$ " + "0.00");
+        }
+
+        private void btnFim_Click(object sender, EventArgs e)
+        {
+            if (lstCompras.Items.Count > 0) 
+            {
+                if (MessageBox.Show("Deseja finalizar a compra?",
+                    "Validação",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question ) == DialogResult.Yes)
+                {
+                    lstCompras.Items.Clear();
+                    SomarCompras();
+                    MessageBox.Show("Compra finalizada com sucesso!",
+                        "Informação",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+            }
+        }
     }
 }
