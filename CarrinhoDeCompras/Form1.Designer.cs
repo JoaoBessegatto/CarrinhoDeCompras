@@ -71,10 +71,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.ControlDarkDark;
+            label2.BackColor = SystemColors.GrayText;
             label2.Font = new Font("Palatino Linotype", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(504, 96);
+            label2.Location = new Point(501, 103);
             label2.Name = "label2";
             label2.Size = new Size(100, 28);
             label2.TabIndex = 4;
@@ -85,7 +85,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Palatino Linotype", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(164, 96);
+            label1.Location = new Point(173, 103);
             label1.Name = "label1";
             label1.Size = new Size(99, 28);
             label1.TabIndex = 5;
@@ -95,8 +95,9 @@
             // 
             lbl1.BackColor = Color.MediumSlateBlue;
             lbl1.Dock = DockStyle.Top;
-            lbl1.Font = new Font("Perpetua Titling MT", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl1.Font = new Font("Perpetua Titling MT", 21.75F, FontStyle.Regular, GraphicsUnit.Point);
             lbl1.ForeColor = SystemColors.ControlLightLight;
+            lbl1.Image = (Image)resources.GetObject("lbl1.Image");
             lbl1.Location = new Point(0, 0);
             lbl1.Name = "lbl1";
             lbl1.Size = new Size(791, 96);
@@ -217,7 +218,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ControlDarkDark;
+            BackColor = SystemColors.GrayText;
             ClientSize = new Size(791, 494);
             Controls.Add(label10);
             Controls.Add(label9);
