@@ -46,6 +46,7 @@
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
+            label11 = new Label();
             SuspendLayout();
             // 
             // lstCompras
@@ -53,7 +54,7 @@
             lstCompras.Font = new Font("Consolas", 12F, FontStyle.Bold, GraphicsUnit.Point);
             lstCompras.FormattingEnabled = true;
             lstCompras.ItemHeight = 19;
-            lstCompras.Location = new Point(407, 144);
+            lstCompras.Location = new Point(407, 141);
             lstCompras.Name = "lstCompras";
             lstCompras.Size = new Size(288, 194);
             lstCompras.TabIndex = 1;
@@ -71,7 +72,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = SystemColors.GrayText;
+            label2.BackColor = SystemColors.WindowText;
             label2.Font = new Font("Palatino Linotype", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label2.ForeColor = SystemColors.ControlLightLight;
             label2.Location = new Point(501, 103);
@@ -83,6 +84,7 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.BackColor = SystemColors.WindowText;
             label1.Font = new Font("Palatino Linotype", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(173, 103);
@@ -214,12 +216,22 @@
             label10.Size = new Size(11, 210);
             label10.TabIndex = 18;
             // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(228, 448);
+            label11.Name = "label11";
+            label11.Size = new Size(0, 15);
+            label11.TabIndex = 19;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GrayText;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(791, 494);
+            Controls.Add(label11);
             Controls.Add(label10);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -242,6 +254,7 @@
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "Form1";
+            ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Carrinho de compras";
             Load += Form1_Load;
@@ -268,5 +281,6 @@
         private Label label8;
         private Label label9;
         private Label label10;
+        private Label label11;
     }
 }
