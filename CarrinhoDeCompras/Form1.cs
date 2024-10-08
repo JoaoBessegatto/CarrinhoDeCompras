@@ -25,12 +25,12 @@ namespace CarrinhoDeCompras
 
             ListaProdutos = new List<Produtos>
             {
-                new Produtos() {nome = "celular", preco = 2500.90 },
+                new Produtos() {nome = "Celular", preco = 2500.90 },
                 new Produtos() {nome = "Notebook", preco = 2900.80 },
-                new Produtos() {nome = "mouse", preco = 250.50},
+                new Produtos() {nome = "Mouse", preco = 250.50},
                 new Produtos() {nome = "Monitor", preco = 750.00},
                 new Produtos() {nome = "Computador", preco = 4750.99},
-                new Produtos() {nome = "headset", preco = 220.50}
+                new Produtos() {nome = "Headset", preco = 220.50}
             };
             foreach (Produtos p in ListaProdutos)
             {
@@ -87,6 +87,14 @@ namespace CarrinhoDeCompras
                     ListaCompras.RemoveAt(index);
                     SomarCompras();
                 }
+                else
+                {
+                    MessageBox.Show(
+                        "O produto não foi removido",
+                        "Informação",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
             }
             else
             {
@@ -101,10 +109,8 @@ namespace CarrinhoDeCompras
         {
             double total = 0;
             foreach (var item in lstCompras.Items)
-            {
-                // Acessa a lista original de produtos associada ao lstProdutos.Tag
+            {                
                 var produtos = (List<Produtos>)lstProdutos.Tag;
-
 
                 foreach (var produto in produtos)
                 {
@@ -112,7 +118,7 @@ namespace CarrinhoDeCompras
                     {
                         total += produto.preco;
                     }
-                }
+                } 
             }
             lbltotal.Text = "Total:" + total.ToString("R$ " + "0.00");
         }
@@ -121,7 +127,7 @@ namespace CarrinhoDeCompras
         {
             if (lstCompras.Items.Count > 0) 
             {
-                if (MessageBox.Show("Deseja finalizar a compra?",
+                if (MessageBox.Show("Deseja finalizar a compra no valor " + lbltotal.Text + " ?" ,
                     "Validação",
                     MessageBoxButtons.YesNo,
                     MessageBoxIcon.Question ) == DialogResult.Yes)
@@ -133,6 +139,14 @@ namespace CarrinhoDeCompras
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Adicione pelo menos um item",
+                    "Informação",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information );
             }
         }
     }
